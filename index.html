@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <title>Paraflex.css</title>
+    
+    <link href="http://samfrons.com/paraflex/favicon.ico" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/style-paraflex-reset.css"/>
+    <style type="text/css">
+    @font-face { font-family: Archer; src: url('http://samfrons.com/fonts/Archer-Medium-Pro.otf'); } 
+
+      a {
+        text-decoration: none;
+        color: white;
+      }
+
+      a:visited {
+        color: gray;
+      }
+  
+      #page_1 {
+        position: absolute;
+        top:0%;
+        -webkit-box-flex: 1;
+      }
+
+      a {
+        -webkit-transition: all 1.5s ease-in-out;
+      }
+      #page_2 {
+      -webkit-box-flex: 1;
+        -webkit-transition: all 1.5s ease-in-out;
+      opacity: 1;
+      position: absolute;
+      top: 100%;
+      width: 100%;
+      height: 100%;
+      background-image: url(http://subtlepatterns.com/patterns/robots.png);
+    
+      }
+
+      #page_3 {
+        position: absolute;
+      color: white;
+      display: none;
+      }
+
+      #page_2:target {
+        overflow: hidden;
+        color: white;
+        height:0%;
+        width: 100%;
+        -webkit-transition: all 1.5s ease-in-out;
+top: 70%;
+      -webkit-transition-property: height;
+       -webkit-box-flex : 0;
+      }
+
+      #page_1:target {
+        color: aqua;
+  position: absolute;
+  -webkit-transition: top 0.7s ease-out;
+  -webkit-animation: move_up 2s; 
+  -webkit-animation-timing-function: ease-in-out;
+      }
+      html {
+
+      }
+       body {
+      margin: 0 auto;
+      font-family: 'Archer';
+      }
+
+      .page {
+        box-flex: 1;
+        
+        background-repeat: repeat;
+        height: 100%;
+        width:100%;
+        }
+
+    
+        #move_up_1 {
+          position: absolute;
+          background-image: url(http://subtlepatterns.com/patterns/cartographer.png);
+          height: 100%;
+          width: 100%;
+          -webkit-box-flex : 4;
+        }
+
+ 
+
+  #move_up_1:target {
+    color: lime;
+    top: -100%;
+  --webkit-transition-property: width, opacity ;
+-webkit-transition-duration:  1.5s;
+-webkit-transition-timing-function: ease-in-out;
+-webkit-box-flex : 1;
+
+        }
+ #move_down_1:target {
+
+  --webkit-transition-property: width;
+-webkit-transition-duration:  2s;
+-webkit-transition-timing-function: ease-in-out;
+-webkit-box-flex : 1;
+        }
+
+#move_down_1 {
+position: absolute;
+top:0%;
+height: 100%;
+width: 100%;
+-webkit-transition: all 2s ease-in-out;
+}
+
+#transform1, #close1 {
+background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png);
+height: 100%;
+width: 0px;
+position: absolute;
+opacity: .2;
+left:0px;
+top:100%;
+z-index: 1;
+}
+
+#transform1:target {
+
+-webkit-transition-property: width, opacity ;
+-webkit-transition-duration:  2s;
+-webkit-transition-timing-function: ease-in-out;
+height: 100%;
+width: 100%;
+opacity: .95;
+z-index: 1;
+}
+
+.page_container {
+  /* basic styling */
+  width: 100%;
+  height: 100%;
+
+  /* flexbox setup */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+
+  display: -moz-box;
+  -moz-box-orient: vertical;
+
+  display: box;
+  box-orient: vertical;
+}
+
+.page_container > section {
+  overflow: hidden;
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  justify-content: center;
+}
+
+
+
+
+section#transform1 > div {
+  display : -webkit-inline-flex;
+  position: absolute;
+}
+section#transform2  {
+  background-image: url(http://subtlepatterns.com/patterns/bo_play_pattern.png);
+  -webkit-box-flex: 0;
+  display : -webkit-inline-flex;
+  position: absolute;
+  color: green;
+  height:0%;
+  width:0%;
+  -webkit-transition: all 1.5s ease-in-out;
+}
+
+#transform2:target {
+   -webkit-transition: all 1.5s ease-in-out;
+-webkit-box-flex: 3;
+height:100%;
+  width:100%;
+  opacity: 0.9;
+}
+
+
+
+section hgroup {
+  z-index: 10 !important;
+  font-size: 2em;
+  letter-spacing: 5px;
+  -we -text-stroke
+  font-family: 'Accidental Presidency';
+  -webkit-text-stroke: 1px solid red;
+ color: white;
+text-shadow: 0px 0px 2px white, 0px 0px 2px #888;
+  margin: 0 auto;
+  margin-top: 200px;
+  height: 80%;
+  width: 50%;
+}
+
+nav#movements {
+  position: fixed;
+  display: block;
+  color: white;
+  z-index: 10;
+  background-image:url(http://subtlepatterns.com/patterns/gplaypattern.png);
+  width: 100%;
+  padding: 15px;
+  box-shadow: 1px 3px 8px rgba(10,20,20,0.8);
+
+}
+
+nav#movements a {
+  color: white;
+  font-family: Star Avenue;
+  font-size: 20px;
+  text-shadow: 0px 2px 4px black;
+  box-shadow: 0px 2px 4px black;
+  background: rgba(10,10,10,0.6);
+  border: 2px solid black;
+  padding:10px;
+-webkit-transition: all 1.5s ease-in-out;
+}
+
+nav#movements a:hover {
+-webkit-filter: invert(1);
+}
+
+nav#movements a:active {
+-webkit-filter: saturate(400%);
+}
+
+a#close1:active {
+background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png);
+height: 100%;
+width: 100%;
+position: absolute;
+opacity: .2;
+left:0px;
+top:100%;
+z-index: 1;
+}
+
+a#close1:target {
+background-image: url(http://subtlepatterns.com/patterns/green_dust_scratch.png);
+height: 100%;
+width: 100px;
+position: absolute;
+opacity: .2;
+left:0px;
+top:100%;
+z-index: 1;
+}
+
+div#logo-pb {
+  position: relative;
+
+background: url(imgs/pointing-bodybuilder-bw.png) no-repeat;
+}
+
+hgroup#home-group {
+  left: 20%;
+  position: relative;
+}
+
+hgroup a#move_up {
+font-size: 25px;
+}
+
+hgroup a#move_up:hover {
+  color: black;
+  text-shadow: 0px 2px 5px black;
+  font-weight: 900;
+  font-size: 30px;
+
+}
+  </style>
+  </head>
+  <body>
+
+<div class="page_container">   
+  <nav id="movements">
+    <a href="#page_2" id="move_down">Home</a> 
+      <a href="#move_up_1" id="move_up">Slide Up</a>
+      <a href="#transform2">Corner Grow</a>
+      <a href="#transform1" id="transform-button">Slide In</a>
+  </nav>
+
+  <nav id="move_up_1"><div id="move_down_1">
+      <section id="page_1" class="page move_up_1">
+
+<div id="logo-pb">
+       <hgroup id="home-group"> 
+        <h1>Welcome to Paraflex.css</h1>
+        <h2>A cunning way to avoid javascript</h2>
+         <a href="#move_up_1" id="move_up">But how does it work?</a></hgroup>
+       </div>
+      </section>
+
+
+      <section id="page_2" class="page">
+
+        <hgroup> 
+        <h1>Using the latest in CSS3</h1>
+        <a href="#page_2" id="move_down">Go back</a> |
+        <a href="#transform1" id="transform-button">Transform</a>
+      </hgroup> 
+        </section>
+      </div>
+      </nav>
+
+      <section id="transform1" class="page">
+         <hgroup>
+        <a href="#close1">close it</a>
+      </hgroup>
+      </section>
+
+      <section id="transform2" class="page">
+        <hgroup>
+        <a href="#close">close it</a>
+      </hgroup>
+      </section>
+
+          <section id="transform3" class="page">
+        <hgroup>
+        <a href="#close3">close it</a>
+      </hgroup>
+      </section>
+
+
+</div>
+     </body>
+          </html>
